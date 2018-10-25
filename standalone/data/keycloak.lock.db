@@ -1,0 +1,6 @@
+#FileLock
+#Tue Oct 23 19:03:34 CEST 2018
+hostName=192.168.0.171
+id=166a1e1aeabcb4bbafeabef759fb7cffb0ae458b2d2
+method=file
+server=192.168.0.171\:59447

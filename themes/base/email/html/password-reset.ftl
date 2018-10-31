@@ -24,7 +24,7 @@
 					<td width="600" style="width:600px">
 						<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px">
 							<tr>
-								<td background="https://ucarecdn.com/cadf23af-9900-4e39-afda-89d5ca4b1b0e/bg.png" width="600" valign="top" style="background: url('https://ucarecdn.com/cadf23af-9900-4e39-afda-89d5ca4b1b0e/bg.png') no-repeat; background-size:100%; background-position: top">
+								<td background="https://ucarecdn.com/cadf23af-9900-4e39-afda-89d5ca4b1b0e/bg.png" width="600" valign="top" style="background: url('https://ucarecdn.com/cadf23af-9900-4e39-afda-89d5ca4b1b0e/bg.png') no-repeat; background-size:cover; background-position: top">
 									<div> 
 										<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="margin:0 auto; width:600px">
 											<tr>
@@ -45,34 +45,7 @@
 															<td height="45" style="height:45px"></td>
 														</tr>														
 														<tr>
-															<td align="center" width="460" style="color:#ffffff; font-size:18px; font-family:Roboto, sans-serif; line-height: 28px; text-align:center;  width:460px">
-																${msg("passwordResetBodyText")}
-															</td>
-														</tr>
-														<tr>
-															<td height="45" style="height:45px"></td>
-														</tr>
-														<tr>
-															<td height="50" style="height:50px">
-																<button href="${kcSanitize(msg(link))}" style="width: 100%; height:100%; background-color:#2d81ff; border:none; border-radius: 24px; color:white; text-transform: uppercase; font-size: 12px; font-weight:600">click to reset the password</button>
-															</td>
-														</tr>
-														<tr>
-															<td height="35" style="height:35px"></td>
-														</tr>
-														<tr>
-															<td width="400" style="text-align:center; line-height:22px; font-size: 15px; font-weight: 500; width:400px; color:white;">
-																Or take link to change the password.
-																This link will expire within 5 minutes:
-															</td>	
-														</tr>
-														<tr>
-															<td height="35" style="height:35px"></td>
-														</tr>
-														<tr>
-															<td height="50" style="height:50px; border: 1px solid white; border-radius: 27px; font-size: 14px; font-weight:600; text-align: center; color:white;">
-																	https://stoic-goodall-c33ed0.netlify.com/
-															</td>
+															${kcSanitize(msg("passwordResetBodyHtml",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
 														</tr>		
 														<tr>
 															<td height="35" style="height:35px"></td>
